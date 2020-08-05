@@ -1,0 +1,17 @@
+<%- include('header.ejs') -%>
+    <div class="box" id="heading">
+        <h1><%= listTittle %></h1>
+    </div>
+    <div class="box">
+        <% for(var i=0;i<toDoList.length;i++) {%>
+            <div class="item">
+                <input type="checkbox" name="" id="">
+                <p><%= toDoList[i] %></p>
+            </div>
+        <%}%>
+        <form action="/" method="post" class="item">
+            <input type="text" name="item" placeholder="New Input" autocomplete="off">
+            <button type="submit" name='list' value=<%= listTittle %>>+</button>
+        </form>
+    </div>
+<%- include('footer.ejs') -%>
